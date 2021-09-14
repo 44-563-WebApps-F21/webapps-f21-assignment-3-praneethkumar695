@@ -64,6 +64,34 @@
                         <td>$15</td>
                     </tr>
                 </table>  
+                <hr>
+                <h3>Code Display</h3>
+                <blockquote cite="https://en.wikipedia.org/wiki/Closest_pair_of_points_problem">The closest pair of points problem or closest pair problem is a problem of computational geometry: 
+                    given n points in metric space, find a pair of points with the smallest distance between them. The closest pair 
+                    problem for points in the Euclidean plane was among the first geometric problems that were treated at the origins 
+                    of the systematic study of the computational complexity of geometric algorithms.</blockquote>
+                    <a href="https://en.wikipedia.org/wiki/Closest_pair_of_points_problem">Link to closest pair of points Description </a>
+                <pre>
+                struct pt {
+                    int x, y, id;
+                };
+                
+                struct cmp_x {
+                    bool operator()(const pt & a, const pt & b) const {
+                        return a.x < b.x || (a.x == b.x && a.y < b.y);
+                    }
+                };
+                
+                struct cmp_y {
+                    bool operator()(const pt & a, const pt & b) const {
+                        return a.y < b.y;
+                    }
+                };
+                
+                int n;
+                vector<pt> a;
+
+                </pre>     
     </body>
 </html>
 
